@@ -1,0 +1,142 @@
+# Notetaking Agent Rules
+
+## Project Purpose
+This project is a notetaking agent focused on creating clear, understandable markdown notes from:
+- Lecture slides (PDF format in `sources/lecture_slides/`)
+- Full lecture notes (`sources/DM22_LectureNotes.pdf`)
+- DMA textbook (`sources/DMA.pdf`)
+
+The goal is to produce notes that are **simple to understand**, **in-depth**, and **less formal** than the original academic materials, while maintaining accuracy and completeness.
+
+## Core Principles
+
+### 1. Writing Style
+- Write in a conversational, accessible tone - imagine explaining concepts to a peer who is learning the material
+- Avoid overly formal academic language; use clear, direct explanations
+- Use active voice when possible ("we calculate" rather than "it is calculated")
+- Break down complex ideas into digestible pieces
+- Use analogies and examples to clarify abstract concepts
+- Define technical terms when first introduced, even if briefly
+
+### 2. Structure and Organization
+- Create one markdown file per lecture/topic, following the naming convention: `lecture_N-topic.md` or similar
+- Use clear hierarchical headings (H1 for lecture title, H2 for major sections, H3 for subsections)
+- Include a table of contents for longer notes
+- Follow the order present on the slides while grouping related concepts together logically
+- Use bullet points and numbered lists to break up dense paragraphs, but use them as little as possible.
+- Add visual separators (horizontal rules) between major sections when helpful
+
+### 3. Content Synthesis
+- **Primary source priority**: When multiple sources cover the same topic:
+  1. Start with lecture slides for structure and key points
+  2. Expand with details from lecture notes
+  3. Use DMA book for deeper theoretical background and additional examples
+- Synthesize information while making sure the information is not altered or hallucinated
+- Identify and reconcile any contradictions or different perspectives across sources
+- Highlight connections between concepts from different lectures
+- Note when information appears in multiple sources (helps with understanding importance)
+
+### 4. Depth and Clarity Balance
+- Explain the "why" behind concepts, not just the "what"
+- Include intuitive explanations before diving into technical details
+- Break down algorithms step-by-step with clear reasoning
+- Use concrete examples to illustrate abstract concepts
+- Include mathematical formulations when necessary, but always explain what they mean in plain language
+- Add notes about common pitfalls or areas where students typically get confused
+
+### 5. Formatting Guidelines
+- Use the $xxxx$ latex format if latex is used
+- Use code blocks for algorithms, pseudocode, and mathematical formulas
+- Use inline code formatting for technical terms, variable names, and function names
+- Create tables for comparisons (e.g., algorithm comparisons, parameter descriptions)
+- Use blockquotes for important definitions or key takeaways
+- Add emphasis (bold/italic) sparingly for truly important concepts
+- Include diagrams descriptions in text when visual aids would help (markdown doesn't support images, but describe what a diagram shows)
+
+### 6. Completeness
+- Cover all the topics from the lecture slides
+- Include important details from lecture notes that provide context
+- Reference relevant book chapters for deeper understanding
+- Note when topics are marked as "optional" in source materials
+- Include practical considerations: when to use which method, trade-offs, real-world applications
+
+### 7. Learning-Focused Additions
+- Add "Key Takeaways" sections at the end of major topics
+- Include "Why This Matters" explanations to provide motivation
+- Note relationships to previous lectures ("This builds on...", "This is similar to...")
+- Highlight practical applications and use cases
+- Include common questions or misconceptions with clarifications
+
+### 8. Technical Accuracy
+- Maintain mathematical and technical correctness
+- Preserve important formulas and definitions accurately
+- Use standard notation from the course materials
+- When simplifying, ensure the simplified explanation is still technically accurate
+- Note when you're providing an intuitive explanation vs. a rigorous one
+
+### 9. Source Attribution
+- Reference which source(s) each section draws from (e.g., "Based on Lecture Notes Ch. X" or "From DMA book Section Y")
+- Note when information comes from multiple sources
+- Indicate when additional context or explanation is added beyond the sources
+
+### 10. File Management
+- Store notes in the root directory or a dedicated `notes/` directory
+- Use consistent naming conventions
+- Create an index file (`index.md`) that links to all lecture notes
+- Keep source files in `sources/` directory unchanged
+
+## Workflow for Creating Notes
+
+1. **Review the content guide** (`sources/lectures_content_guide.txt`) to understand lecture structure
+2. **Read lecture slides** to understand the main flow and key points
+3. **Read corresponding sections** in lecture notes for detailed explanations
+4. **Reference DMA book** for theoretical background and additional context
+5. **Synthesize** information into a coherent narrative
+6. **Add explanations** and clarifications to make concepts accessible
+7. **Review and refine** for clarity and completeness
+
+## Quality Checklist
+Before finalizing notes, ensure:
+- [ ] All major topics from slides are covered
+- [ ] Concepts are explained in accessible language
+- [ ] Technical accuracy is maintained
+- [ ] Examples and analogies clarify rather than confuse
+- [ ] Structure is logical and easy to follow
+- [ ] Connections to other lectures are noted
+- [ ] Key takeaways are highlighted
+- [ ] Mathematical notation is correct and explained
+
+## Example Note Structure
+
+```markdown
+# Lecture N: Topic Name
+
+## Overview
+Brief introduction to what this lecture covers and why it matters.
+
+## Section 1: Main Topic
+### Concept A
+Explanation with intuitive understanding first, then technical details.
+
+### Concept B
+...
+
+## Section 2: Another Topic
+...
+
+## Key Takeaways
+- Main point 1
+- Main point 2
+- ...
+
+## Connections
+- How this relates to previous lectures
+- What this sets up for future lectures
+
+## References
+- Lecture slides: [filename]
+- Lecture notes: [section/chapter]
+- DMA book: [chapter/section]
+```
+
+Remember: The goal is to create notes that help someone understand the material deeply, not just memorize it. Prioritize clarity and understanding over brevity or formality.
